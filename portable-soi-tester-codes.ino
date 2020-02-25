@@ -20,6 +20,7 @@ void setup(void) {
   lcd.begin(20,4);  
 }
 
+//method for reading temperature.
 void readTemp(){
   sensor.requestTemperatures();
   lcd.setCursor(0,0);
@@ -33,8 +34,7 @@ void readTemp(){
  }
 }
 
-
-
+//method for reading moisture
 void readMoisture(){
  lcd.setCursor(0,1);
  lcd.print("Moisture: ");
@@ -43,6 +43,8 @@ void readMoisture(){
  lcd.print(moisture);
  lcd.print("%");
 }
+
+//method for reading pH
 void readpH(){
   lcd.setCursor(0,2);
   lcd.print("pH value: ");
